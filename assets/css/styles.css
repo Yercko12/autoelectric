@@ -1,0 +1,147 @@
+.menu {
+    grid-area: menudenavegacion;
+    background-color: #0367A6;
+    color: white;
+    gap: 10px;
+
+}
+
+.menu ul {
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.menu li{
+    padding-top: 10px;
+    padding-right: 50px;
+}
+
+.titulo{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+
+}
+.titulo i{
+    font-size: 25px;
+    gap: 10px;
+}
+
+.filtro {
+    grid-area: Secciónfiltrosbúsqueda;
+    background-color: #F2F2F2;
+}
+.container{
+    text-align: center;
+}
+.precio{
+    background-color: rgb(255, 255, 255);
+    padding: 3px 3px 3px 3px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.precio i{
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+.principal {
+    grid-area: SeccionPrincipal;
+    background-color: white;
+}
+.autos1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.auto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border: 1px solid rgb(204, 204, 204);
+    padding-left: 20px;
+}
+.auto img {
+    width: 350px;
+    height: 300px;
+}
+.auto button{
+    border: none;
+    background-color: #0980e7;
+    color: white;
+    height: 30px;
+    width: 70px;
+    font-size: 15px;
+}
+footer {
+    grid-area: piedepagina;
+    background-color: #023E73;
+
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+.redes i{
+    font-size: 30px;
+    padding-top: 10px;
+}
+.texto{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #0980e7;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.item i{
+    border: 1px solid #cecece;
+    padding: 5px 5px 5px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "menudenavegacion"
+        "Secciónfiltrosbúsqueda"
+        "SeccionPrincipal"
+        "piedepagina";
+}
+
+
+@media (min-width:576px) {
+    body {
+        grid-template-areas:
+            "menudenavegacion Secciónfiltrosbúsqueda Secciónfiltrosbúsqueda"
+            "menudenavegacion SeccionPrincipal       SeccionPrincipal"
+            "menudenavegacion SeccionPrincipal       SeccionPrincipal   "
+            "piedepagina      SeccionPrincipal       SeccionPrincipal";
+        grid-template-columns: 13% auto auto;
+    }
+    .menu ul{
+        display: block;
+    }
+    .barra i{
+        display: none;
+        
+    }
+
+   }
